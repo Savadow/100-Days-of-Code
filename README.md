@@ -20,7 +20,7 @@
 > PyPassword Generator: A program generates a random password based on some criteria
 
 - `day_6.py`
-> (Reeborg's World)[reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle 1&url=worlds%2Ftutorial_en%2Fhurdle1.json]: A function based game about a robot
+> [Reeborg's World](reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle 1&url=worlds%2Ftutorial_en%2Fhurdle1.json): A function based game about a robot
 
 - `day_7.py`
 > Hangman: A simple hangman game
