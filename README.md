@@ -45,3 +45,6 @@
 
 - `day_16.py`
 > Coffee Maker: A coffee machine using OOP
+
+- `day_17.py`
+> Quiz Game: A simple game of quiz using OOP

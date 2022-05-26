@@ -27,3 +27,23 @@
 #### Main ####
 ############
 
+#==== Imports ====#
+from modules.question_model import Question
+from modules.data import question_data
+from modules.quiz_brain import QuizBrain
+
+#==== Variable Declaration ====#
+question_bank = []
+quiz = QuizBrain(question_bank)
+
+#==== Body ====#
+for i in range(len(question_data)):
+    question = question_data[i]["text"]
+    answer = question_data[i]["answer"]
+    question_bank.append(Question(question, answer))
+
+while quiz.still_has_questions():
+    quiz.next_question()
+
+print("You've completed the quiz")
+print(f"Your score was: {quiz.score}/{quiz.number}")
