@@ -14,7 +14,7 @@
 > Treasure Island: A simple text based game about treasure seeking
 
 - `day_4.py`
-> Rock, Paper, Scissors A simple game of RPS
+> Rock, Paper, Scissors: A simple game of RPS
 
 - `day_5.py`
 > PyPassword Generator: A program generates a random password based on some criteria
@@ -48,3 +48,9 @@
 
 - `day_17.py`
 > Quiz Game: A simple game of quiz using OOP
+
+- `day_18.py`
+> NA
+
+- `day_19.py`
+> Turtle Race: A simple game of turtle racing using the Turtle class
