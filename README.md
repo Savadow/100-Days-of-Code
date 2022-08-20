@@ -54,3 +54,6 @@
 
 - `day_19.py`
 > Turtle Race: A simple game of turtle racing using the Turtle class
+
+- `day_20_and_day_21.py`
+> Snake Game: A game of snake using OOP and the Turtle class

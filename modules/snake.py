@@ -2,7 +2,7 @@
 from turtle import Turtle
 
 #==== Constant Declaration ====#
-POS = 0
+POS = [(0, 0), (-20, 0), (-40, 0)]
 DISTANCE = 20
 UP = 90
 DOWN = 270
@@ -19,16 +19,14 @@ class Snake:
     def create(self):
         global POS
 
-        for segment in range(3):
-            self.add_segment(POS)
-            POS -= 20
+        for segment in POS:
+            self.add_segment(segment)
 
     def add_segment(self, position):
-
         snake = Turtle(shape="square")
         snake.color("white")
         snake.penup()
-        snake.setpos(x=position, y=0)
+        snake.setpos(position)
         self.segments.append(snake)
 
     def extend(self):

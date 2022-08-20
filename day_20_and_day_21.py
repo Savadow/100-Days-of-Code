@@ -10,6 +10,8 @@ from modules.scoreboard import Score
 import time
 
 #==== Body ====#
+FiLE = "leaderboard.txt"
+
 screen = Screen()
 screen.setup(width = 600, height = 600)
 screen.bgcolor("black")
@@ -20,6 +22,12 @@ snake = Snake()
 food = Food()
 score = Score()
 
+name = screen.textinput(title="Name",
+                             prompt="Enter your name:  ")
+
+level = screen.textinput(title="Difficulty",
+                             prompt="Choose a difficulty(easy/medium/hard): ")
+
 screen.listen()
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
@@ -27,9 +35,20 @@ screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
 game = True
+
 while game:
     screen.update()
-    time.sleep(0.1)
+
+    if level == "easy":
+        time.sleep(1)
+        score.increment = 5
+
+    elif level == "medium":
+        time.sleep(0.5)
+        score.increment = 3
+
+    else:
+        time.sleep(0.1)
 
     snake.move()
 
@@ -40,8 +59,17 @@ while game:
         score.track()
 
     # Detecting collision with wall
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+    if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 \
+            or snake.head.ycor() < -290:
         game = False
         score.game_over()
+        score.leaderboard(file = FiLE, name = name, difficulty = level)
+
+    # Detecting collision with body
+    for segment in snake.segments[1:]:
+        if snake.head.distance(segment) < 10:
+            game = False
+            score.game_over()
+            score.leaderboard(file=FiLE, name=name, difficulty=level)
 
 screen.exitonclick()

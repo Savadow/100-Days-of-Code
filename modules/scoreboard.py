@@ -10,6 +10,7 @@ class Score(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
+        self.increment = 1
         self.color("white")
         self.penup()
         self.setpos(0, 270)
@@ -24,6 +25,10 @@ class Score(Turtle):
         self.write("GAME OVER!!", align=ALIGNMENT, font=STYLE)
 
     def track(self):
-        self.score += 1
+        self.score += self.increment
         self.clear()
         self.update()
+
+    def leaderboard(self, file, name, difficulty):
+        with open(file, "a") as f:
+            f.write(f"\n{name}\t{difficulty}\t\t{self.score}")
