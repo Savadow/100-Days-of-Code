@@ -31,4 +31,4 @@ class Score(Turtle):
 
     def leaderboard(self, file, name, difficulty):
         with open(file, "a") as f:
-            f.write(f"\n{name}\t{difficulty}\t\t{self.score}")
+            f.write(f"\n{name},{difficulty},{self.score}")

@@ -10,7 +10,7 @@ from modules.scoreboard import Score
 import time
 
 #==== Body ====#
-FiLE = "leaderboard.txt"
+FiLE = "leaderboard.csv"
 
 screen = Screen()
 screen.setup(width = 600, height = 600)
@@ -40,15 +40,18 @@ while game:
     screen.update()
 
     if level == "easy":
-        time.sleep(1)
+        time.sleep(0.5)
         score.increment = 5
 
     elif level == "medium":
-        time.sleep(0.5)
+        time.sleep(0.3)
         score.increment = 3
 
-    else:
+    elif level == "hard":
         time.sleep(0.1)
+
+    else:
+        screen.clearscreen()
 
     snake.move()
 

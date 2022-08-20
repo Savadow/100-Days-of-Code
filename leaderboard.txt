@@ -1,4 +1,0 @@
-Name        Difficulty  Score
-Savadow	hard		13
-Savadow	hard		0
-Savadow	easy		5
