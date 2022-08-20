@@ -41,11 +41,11 @@ while game:
 
     if level == "easy":
         time.sleep(0.5)
-        score.increment = 5
+        score.increment = 3
 
     elif level == "medium":
         time.sleep(0.3)
-        score.increment = 3
+        score.increment = 2
 
     elif level == "hard":
         time.sleep(0.1)
