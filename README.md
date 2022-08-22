@@ -60,4 +60,6 @@
 > file holds all the scores
 
 - `day_22.py`
-> Pong Game: A game of pong using OOP and the Turtle class
+> Pong Game: A game of pong using OOP and the Turtle class. For left paddle, move up 
+> with `W` and move down with `S` while for right paddle, move up with `Up Arrow` 
+> and move down with `Down Arrow`

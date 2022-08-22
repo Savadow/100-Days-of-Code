@@ -26,7 +26,7 @@ name = screen.textinput(title="Name",
                              prompt="Enter your name:  ")
 
 level = screen.textinput(title="Difficulty",
-                             prompt="Choose a difficulty(easy/medium/hard): ")
+                             prompt="Choose a difficulty(e = easy/m = medium/h = hard): ")
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -39,8 +39,8 @@ game = True
 while game:
     height = screen.window_height()
     width = screen.window_width()
-    xcor = ((width / 2) - 10)
-    ycor = ((height / 2) - 10)
+    xcor = ((width / 2) - 5)
+    ycor = ((height / 2) - 5)
     score.y = ycor - 10
     food.x = [((width // 2) - 20) * -1, ((width // 2) - 10)]
     food.y = [((height // 2) - 20) * -1, ((height // 2) - 10)]
