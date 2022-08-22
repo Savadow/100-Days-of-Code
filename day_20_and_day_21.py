@@ -10,10 +10,10 @@ from modules.scoreboard import Score
 import time
 
 #==== Body ====#
-FiLE = "leaderboard.csv"
+FILE = "leaderboard.csv"
 
 screen = Screen()
-screen.setup(width = 600, height = 600)
+# screen.setup(width = 600, height = 600)
 screen.bgcolor("black")
 screen.title("Savadow's Snake Game")
 screen.tracer(0)
@@ -37,6 +37,13 @@ screen.onkey(snake.right, "Right")
 game = True
 
 while game:
+    height = screen.window_height()
+    width = screen.window_width()
+    xcor = ((width / 2) - 10)
+    ycor = ((height / 2) - 10)
+    score.y = ycor - 10
+    food.x = [((width // 2) - 20) * -1, ((width // 2) - 10)]
+    food.y = [((height // 2) - 20) * -1, ((height // 2) - 10)]
     screen.update()
 
     if level == "easy":
@@ -62,17 +69,17 @@ while game:
         score.track()
 
     # Detecting collision with wall
-    if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 \
-            or snake.head.ycor() < -290:
+    if snake.head.xcor() > xcor or snake.head.xcor() < (xcor * -1) or snake.head.ycor() > ycor \
+            or snake.head.ycor() < (ycor * -1):
         game = False
         score.game_over()
-        score.leaderboard(file = FiLE, name = name, difficulty = level)
+        score.leaderboard(file = FILE, name = name, difficulty = level)
 
     # Detecting collision with body
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
             game = False
             score.game_over()
-            score.leaderboard(file=FiLE, name=name, difficulty=level)
+            score.leaderboard(file=FILE, name=name, difficulty=level)
 
 screen.exitonclick()

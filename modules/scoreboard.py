@@ -13,7 +13,8 @@ class Score(Turtle):
         self.increment = 1
         self.color("white")
         self.penup()
-        self.setpos(0, 270)
+        self.y = 270
+        self.setpos(0, self.y)
         self.hideturtle()
         self.update()
 
