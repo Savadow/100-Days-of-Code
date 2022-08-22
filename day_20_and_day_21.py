@@ -10,7 +10,7 @@ from modules.scoreboard import Score
 import time
 
 #==== Body ====#
-FILE = "leaderboard.csv"
+FILE = "snake_leaderboard.csv"
 
 screen = Screen()
 # screen.setup(width = 600, height = 600)
