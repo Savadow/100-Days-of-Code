@@ -2,6 +2,9 @@
 from turtle import Turtle
 
 # === Body ====#
+ALIGNMENT = "center"
+STYLE = ("Courier", 80, "normal")
+
 class Paddle(Turtle):
     def __init__(self, position):
         super().__init__()
@@ -32,6 +35,7 @@ class Ball(Turtle):
         self.penup()
         self.x_increment = 10
         self.y_increment = 10
+        self.play_speed = 0.1
 
     def move(self):
         xcor = self.xcor() + self.x_increment
@@ -43,7 +47,35 @@ class Ball(Turtle):
 
     def paddle_bounce(self):
         self.x_increment *= -1
+        self.play_speed *= 0.9
 
     def reset_pos(self):
         self.goto(0, 0)
+        self.play_speed = 0.1
         self.paddle_bounce()
+
+
+class Scoreboard(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.color("white")
+        self.penup()
+        self.hideturtle()
+        self.l_score = 0
+        self.r_score = 0
+        self.update()
+
+    def update(self):
+        self.clear()
+        self.setpos(-100, 200)
+        self.write(self.l_score, align = ALIGNMENT, font = STYLE)
+        self.setpos(100, 200)
+        self.write(self.r_score, align=ALIGNMENT, font=STYLE)
+
+    def l_track(self):
+        self.l_score += 1
+        self.update()
+
+    def r_track(self):
+        self.r_score += 1
+        self.update()

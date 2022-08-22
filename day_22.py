@@ -1,6 +1,6 @@
 #==== Imports ====#
 from turtle import Screen
-from modules.pong import Paddle, Ball
+from modules.pong import Paddle, Ball, Scoreboard
 import time
 
 #==== Initialization ====#
@@ -13,8 +13,8 @@ screen.tracer(0)
 
 r_paddle = Paddle((370, 0))
 l_paddle = Paddle((-370, 0))
-
 ball = Ball()
+score = Scoreboard()
 
 #==== Body ====#
 screen.listen()
@@ -25,7 +25,7 @@ screen.onkey(l_paddle.down, "s")
 
 game = True
 while game:
-    time.sleep(0.1)
+    time.sleep(ball.play_speed)
     screen.update()
     ball.move()
 
@@ -39,10 +39,12 @@ while game:
         ball.paddle_bounce()
 
     # Detect ball out of bounds and scoring
-    if ball.xcor() > 380:
+    if ball.xcor() > 390:
         ball.reset_pos()
+        score.l_track()
 
-    if ball.xcor() < -380:
+    if ball.xcor() < -390:
         ball.reset_pos()
+        score.r_track()
 
 screen.exitonclick()
