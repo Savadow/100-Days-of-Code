@@ -56,4 +56,8 @@
 > Turtle Race: A simple game of turtle racing using the Turtle class
 
 - `day_20_and_day_21.py`
-> Snake Game: A game of snake using OOP and the Turtle class
+> Snake Game: A game of snake using OOP and the Turtle class. `snake_leaderboard.csv` 
+> file holds all the scores
+
+- `day_22.py`
+> Pong Game: A game of pong using OOP and the Turtle class
