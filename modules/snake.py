@@ -17,9 +17,7 @@ class Snake:
         self.head = self.segments[0]
 
     def create(self):
-        global POS
-
-        for segment in POS:
+       for segment in POS:
             self.add_segment(segment)
 
     def add_segment(self, position):

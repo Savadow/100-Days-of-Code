@@ -26,7 +26,7 @@ name = screen.textinput(title="Name",
                              prompt="Enter your name:  ")
 
 level = screen.textinput(title="Difficulty",
-                             prompt="Choose a difficulty(e = easy/m = medium/h = hard): ")
+                             prompt="Choose a difficulty(easy/medium/hard): ")
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -72,14 +72,14 @@ while game:
     if snake.head.xcor() > xcor or snake.head.xcor() < (xcor * -1) or snake.head.ycor() > ycor \
             or snake.head.ycor() < (ycor * -1):
         game = False
-        score.game_over()
+        score.game_over(name = name, difficulty = level)
         score.leaderboard(file = FILE, name = name, difficulty = level)
 
     # Detecting collision with body
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
             game = False
-            score.game_over()
+            score.game_over(name = name, difficulty = level)
             score.leaderboard(file=FILE, name=name, difficulty=level)
 
 screen.exitonclick()

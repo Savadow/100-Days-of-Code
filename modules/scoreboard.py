@@ -21,9 +21,10 @@ class Score(Turtle):
     def update(self):
         self.write(f"Score: {self.score}", align = ALIGNMENT, font = STYLE)
 
-    def game_over(self):
+    def game_over(self, name, difficulty):
         self.setpos(0, 0)
         self.write("GAME OVER!!", align=ALIGNMENT, font=STYLE)
+        print(f"\n{name}\t{difficulty}\t{self.score}")
 
     def track(self):
         self.score += self.increment

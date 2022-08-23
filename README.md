@@ -56,10 +56,14 @@
 > Turtle Race: A simple game of turtle racing using the Turtle class
 
 - `day_20_and_day_21.py`
-> Snake Game: A game of snake using OOP and the Turtle class. `snake_leaderboard.csv` 
-> file holds all the scores
+> Snake Game: A game of snake using OOP and the Turtle class. You can control the 
+> snake using the `Arrow` keys and the `snake_leaderboard.csv` file holds all the scores
 
 - `day_22.py`
 > Pong Game: A game of pong using OOP and the Turtle class. For left paddle, move up 
 > with `W` and move down with `S` while for right paddle, move up with `Up Arrow` 
 > and move down with `Down Arrow`
+
+- `day_23.py`
+> Turtle Crossing Game: A turtle crossing game using OOP and the Turtle class. You can
+> only move up using the `Up Arrow`
