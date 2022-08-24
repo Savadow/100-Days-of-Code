@@ -4,9 +4,7 @@
 
 #==== Imports ====#
 from turtle import Screen
-from modules.snake import Snake
-from modules.food import Food
-from modules.scoreboard import Score
+from modules.snake import Snake, Food, Score
 import time
 
 #==== Body ====#
@@ -71,15 +69,17 @@ while game:
     # Detecting collision with wall
     if snake.head.xcor() > xcor or snake.head.xcor() < (xcor * -1) or snake.head.ycor() > ycor \
             or snake.head.ycor() < (ycor * -1):
-        game = False
-        score.game_over(name = name, difficulty = level)
         score.leaderboard(file = FILE, name = name, difficulty = level)
+        score.reset()
+        snake.reset()
+        game = False
 
     # Detecting collision with body
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
+            score.leaderboard(file = FILE, name = name, difficulty = level)
+            score.reset()
+            snake.reset()
             game = False
-            score.game_over(name = name, difficulty = level)
-            score.leaderboard(file=FILE, name=name, difficulty=level)
 
 screen.exitonclick()

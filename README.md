@@ -57,7 +57,8 @@
 
 - `day_20_and_day_21.py`
 > Snake Game: A game of snake using OOP and the Turtle class. You can control the 
-> snake using the `Arrow` keys and the `snake_leaderboard.csv` file holds all the scores
+> snake using the `Arrow` keys. The `snake_leaderboard.csv` file holds all the scores
+> while the `snake_data.txt` file holds the high score 
 
 - `day_22.py`
 > Pong Game: A game of pong using OOP and the Turtle class. For left paddle, move up 
