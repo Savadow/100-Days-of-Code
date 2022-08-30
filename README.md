@@ -2,7 +2,7 @@
 ## A repo for all my projects for the python #100DaysofCode program
 
 - `modules`
-> Holds user-written functions or externally provided materials for imports
+> Holds user-written functions or externally provided resoures for imports
 
 - `day_1.py`
 > Band Name Generator: A simple program that takes two inputs and prints a band name
@@ -68,3 +68,10 @@
 - `day_23.py`
 > Turtle Crossing Game: A turtle crossing game using OOP and the Turtle class. You can
 > only move up using the `Up Arrow`
+
+- `day_24.py`
+> Mail Merge: A simple mail merge program
+
+- `day_25.py`
+> U.S. States Guessing Game: A game to guess all 50 states in the U.S. using turtle and 
+> pandas
