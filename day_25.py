@@ -76,14 +76,12 @@
 #==== Imports ====#
 import turtle
 import pandas
-import time
 
 #=== Declarations ====#
 screen = turtle.Screen()
 image = "modules/day_25/blank_states_img.gif"
 data = pandas.read_csv("modules/day_25/50_states.csv")
 guessed_state = []  # States guessed
-rem = []  # States not guessed before quit
 
 #==== Function Definitions ====#
 # def mouse_coor(x, y):
@@ -103,10 +101,7 @@ while len(guessed_state) < 50:
                              prompt = "Enter a state").title()
 
     if guess == "Exit":
-        for state in data["state"].values:
-            if state not in guessed_state:
-                rem.append(state)
-
+        rem = [state for state in data["state"].values if state not in guessed_state]
         df = pandas.DataFrame({"Names": rem})
         df.to_csv("modules/day_25/states_to_learn.csv", index=False)
         break

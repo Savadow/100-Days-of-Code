@@ -75,3 +75,7 @@
 - `day_25.py`
 > U.S. States Guessing Game: A game to guess all 50 states in the U.S. using turtle and 
 > pandas
+
+- `day_26.py`
+> NATO Alphabet: A program that outputs a list of NATO alphabet based on a word
+> inputted
