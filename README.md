@@ -2,7 +2,7 @@
 ## A repo for all my projects for the python #100DaysofCode program
 
 - `modules`
-> Holds user-written functions or externally provided resoures for imports
+> Holds user-written functions or externally provided resources for imports
 
 - `day_1.py`
 > Band Name Generator: A simple program that takes two inputs and prints a band name
@@ -26,7 +26,7 @@
 > Hangman: A simple hangman game
 
 - `day_8.py`
-> Cipher Encryption: A caeser cipher encryption program
+> Cipher Encryption: A ceaser cipher encryption program
 
 - `day_9.py`
 > Blind Auction: A blind bidding program
@@ -81,4 +81,19 @@
 > inputted
 
 - `day_27.py`
-> Mile to Km Converter: A simple GUI proram that converts miles to km using tkinter
+> Mile to Km Converter: A simple GUI program that converts miles to km using tkinter
+
+- `day_28.py`
+> Pomodoro: A simple pomodoro app using tkinter
+
+- `day_29.py`
+> Password Manager: A simple GUI program that helps manage passwords. It allows 
+> you to save password to a `saved_passwords.json` file on the Desktop and can also 
+> generate passwords for you which are automatically saved to the clipboard. It also 
+> allows you to search for websites that may have been saved previously
+
+- `day_30.py`
+> Exception Handling
+
+- `day_31.py`
+> Flash Card: A simple flash card app

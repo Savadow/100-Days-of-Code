@@ -57,11 +57,22 @@
 #==== Imports ====#
 import pandas
 
+#==== Function Definitions ====#
+def generate_nato():
+    word = input("Enter a word: ").upper()
+
+    try:
+        code_list = [data_dict[letter] for letter in word]
+    except KeyError:
+        print("Sorry, only letters of the English alphabet please")
+        generate_nato()
+    else:
+        print(code_list)
+
 #==== Declarations ====#
 data = pandas.read_csv("modules/day_26/nato_phonetic_alphabet.csv")
-word = input("Enter a word: ").upper()
 
 #==== Body ====#
 data_dict = {row.letter: row.code for index, row in data.iterrows()}
-code_list = [data_dict[letter] for letter in word]
-print(code_list)
+
+generate_nato()
