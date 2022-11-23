@@ -19,7 +19,7 @@
 - `day_5.py`
 > PyPassword Generator: A program generates a random password based on some criteria
 
-- `day_6.py`
+- `day_6`
 > [Reeborg's World](reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle 1&url=worlds%2Ftutorial_en%2Fhurdle1.json): A function based game about a robot
 
 - `day_7.py`
@@ -38,7 +38,13 @@
 > Blackjack: A simple game of blackjack
 
 - `day_12.py`
-> Number Guessing Game: A game of nuber guessing
+> Number Guessing Game: A game of number guessing
+
+- `day_13`
+> [Debugging](https://repl.it/@appbrewery/day-13-1-exercise): Debugging tips
+
+- `day_14.py`
+> Higher Lower Game: A game of higher or lower
 
 - `day_15.py`
 > Coffee Maker: A coffee machine using functions
@@ -97,3 +103,7 @@
 
 - `day_31.py`
 > Flash Card: A simple flash card app
+
+- `day_32.py`
+> Birthday Wisher: A simple program that sends a letter to someone's email on their
+> birthday
