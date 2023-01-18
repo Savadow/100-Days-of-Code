@@ -111,3 +111,9 @@
 - `day_33.py`
 > ISS Overhead Notifier: A program that notifies you if the ISS is 
 > overhead when the sky is dark
+
+- `day_34.py`
+> Quizzler: A GUI quiz program that gets its data from The Open 
+> Trivia Database API. If you want the quiz to be anime related 
+> (sorry, but I'm biased towards anime😂😂), you can uncomment 
+> the commented lines of code in `modules/day_34/data.py`
