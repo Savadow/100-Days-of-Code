@@ -67,7 +67,7 @@ def find_password():
         messagebox.showwarning(title = "Missing Data",
                                message = f"No details for {site} exists")
     else:
-        messagebox.showinfo(title = site, message = f"Email: {mail}\nPassword: {pass_}")
+        messagebox.showinfo(title = site, message = f"Email/Username: {mail}\nPassword: {pass_}")
 
 
 
@@ -85,7 +85,8 @@ generate_password = Button(text = "Generate Password", command = gen_passcode)
 add_password = Button(text = "Add", width = 36, command = save)
 search = Button(text = "Search", width = 14, command = find_password)
 
-FILE = "C:/Users/USER/Desktop/saved_passwords.json"
+sys_name = "USER"
+FILE = f"C:/Users/{sys_name}/Desktop/saved_passwords.json"
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
         "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
         "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I",

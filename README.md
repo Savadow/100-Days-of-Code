@@ -1,5 +1,5 @@
 # 100-Days-of-Code
-## A repo for all my projects for the python #100DaysofCode program
+## A repo for all my projects for the python `#100DaysofCode` program
 
 - `modules`
 > Holds user-written functions or externally provided resources for imports
@@ -117,3 +117,8 @@
 > Trivia Database API. If you want the quiz to be anime related 
 > (sorry, but I'm biased towards anime😂😂), you can uncomment 
 > the commented lines of code in `modules/day_34/data.py`
+
+- `day_35.py`
+> Weather Forecast: A program that uses [OpenWeatherMap](openweathermap.org)
+> and [Twilio](twilio.com) APIs to check if it'll rain in the
+> next 12 hours from 7 a.m and sends me an SMS
