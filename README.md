@@ -119,6 +119,6 @@
 > the commented lines of code in `modules/day_34/data.py`
 
 - `day_35.py`
-> Weather Forecast: A program that uses [OpenWeatherMap](openweathermap.org)
+> Rain Alert: A program that uses [OpenWeatherMap](openweathermap.org)
 > and [Twilio](twilio.com) APIs to check if it'll rain in the
 > next 12 hours from 7 a.m and sends me an SMS
